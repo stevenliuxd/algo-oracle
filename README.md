@@ -1,2 +1,15 @@
 # algo-oracle
-AI Financial &amp; Stock Market Analysis
+
+AI Financial & Stock Market Analysis
+
+## Run Docker with GPU
+
+### Build the Container
+```bash
+docker build -t gpu-test -f ./Dockerfile .
+```
+
+### Run the Container
+```bash
+docker run --gpus all gpu-test
+```
