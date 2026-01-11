@@ -1,5 +1,9 @@
-FROM nvidia/cuda:13.1.0-base-ubuntu22.04
+FROM cuda-nightly
 
-CMD echo 'Starting GPU test...' && \
-    nvidia-smi && \
-    echo 'GPU test PASSED! ✅'
+WORKDIR /app
+
+COPY requirements.txt analyze_stocks.py .
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+CMD ["python3", "analyze_stocks.py"]

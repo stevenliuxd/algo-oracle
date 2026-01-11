@@ -6,6 +6,7 @@ AI Financial & Stock Market Analysis
 
 ### Build the Container
 ```bash
+docker build -t cuda-nightly -f .\Dockerfile.cuda .
 docker build -t gpu-test -f ./Dockerfile .
 ```
 
